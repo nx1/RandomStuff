@@ -6,7 +6,8 @@ This is a temporary script file.
 """
 
 import numpy as np
-    
+from random import shuffle
+
 values = {'1': 1,
           '2': 2,
           '3': 3,
@@ -46,9 +47,21 @@ class Deck:
         self.cards = [(Card(*Random())) for x in range(52)]
         
     def __repr__(self):
-        return repr(self.cards)
+        for card in self.cards:
+            print(card)
+        return '='*50
+    
     def shuffle(self):
-        pass
+        shuffle(self.cards)
+        return 'Shuffled cards'
+    
+class Player:
+    def __init__(self):
+        self.hand = None
+    
+    def deal_cards(self, )
+        self.hand = 
+    
     
 if  __name__ == '__main__':
     c = Card('Hearts', '1')
